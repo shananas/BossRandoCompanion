@@ -1,7 +1,7 @@
 title: Boss Rando Hour Companion
 originalAuthor: Shananas, Num, Kayya
 game: kh2
-description: Gives all forms movement so you dont t-pose during Boss Rando when having level 5 movement which applies even to forms of sora. Removes the problem of datas being stuck at lv 99, bosses with varying HP on Wild, and bosses on Prison Keeper & Sephiroth crashing on data/Terra arenas. Also (experimentally) fixes enemy rando breaking Olympus Stone's effect on PC. Removes the timer from OC Pete in the Lock. Made for use with Boss/Enemy rando.
+description: Combines Nums Better Boss Scaling, Kayyas remove OC pete timer, and shananas boss rando movement fix mods into one mod for easy enabling and disabling put above the seed. Credit to them.
 assets:
 - name: obj/P_EX100_BTLF.mset
   method: copy
