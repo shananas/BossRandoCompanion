@@ -1,0 +1,178 @@
+title: Boss Rando Hour Companion
+originalAuthor: Shananas, Num, Kayya
+game: kh2
+description: Gives all forms movement so you dont t-pose during Boss Rando when having level 5 movement which applies even to forms of sora. Removes the problem of datas being stuck at lv 99, bosses with varying HP on Wild, and bosses on Prison Keeper & Sephiroth crashing on data/Terra arenas. Also (experimentally) fixes enemy rando breaking Olympus Stone's effect on PC. Removes the timer from OC Pete in the Lock. Made for use with Boss/Enemy rando.
+assets:
+- name: obj/P_EX100_BTLF.mset
+  method: copy
+  source:
+  - name: obj/P_EX100_BTLF.mset
+- name: obj/P_EX100_MAGF.mset
+  method: copy
+  source:
+  - name: obj/P_EX100_MAGF.mset
+- name: obj/P_EX100_KH1F.mset
+  method: copy
+  source:
+  - name: obj/P_EX100_KH1F.mset
+- name: obj/P_EX100_TRIF.mset
+  method: copy
+  source:
+  - name: obj/P_EX100_TRIF.mset
+- name: obj/P_EX100_ULTF.mset
+  method: copy
+  source:
+  - name: obj/P_EX100_ULTF.mset
+- name: obj/P_EX100_HTLF.mset
+  method: copy
+  source:
+  - name: obj/P_EX100_HTLF.mset
+#Various Stuff
+- name: 00battle.bin
+  method: binarc
+  source:
+  - name: enmp #Halve MCP's HP & Remove Terra and Datas' Fixed Levels
+    type: list
+    method: copy
+    source:
+    - name: Enmp.bin
+- name: ard/he03.ard
+  multi:
+  - name: ard/us/he03.ard
+  - name: ard/fr/he03.ard
+  - name: ard/gr/he03.ard
+  - name: ard/it/he03.ard
+  - name: ard/sp/he03.ard
+  method: binarc
+  source:
+  - name: btl
+    type: areadatascript
+    method: areadatascript
+    source:
+    - name: ard/he03/btl.script
+- name: ard/he05.ard
+  multi:
+  - name: ard/us/he05.ard
+  - name: ard/fr/he05.ard
+  - name: ard/gr/he05.ard
+  - name: ard/it/he05.ard
+  - name: ard/sp/he05.ard
+  method: binarc
+  source:
+  - name: btl
+    type: areadatascript
+    method: areadatascript
+    source:
+    - name: ard/he05/btl.script
+- name: ard/he06.ard
+  multi:
+  - name: ard/us/he06.ard
+  - name: ard/fr/he06.ard
+  - name: ard/gr/he06.ard
+  - name: ard/it/he06.ard
+  - name: ard/sp/he06.ard
+  method: binarc
+  source:
+  - name: btl
+    type: areadatascript
+    method: areadatascript
+    source:
+    - name: ard/he06/btl.script
+- name: ard/he07.ard
+  multi:
+  - name: ard/us/he07.ard
+  - name: ard/fr/he07.ard
+  - name: ard/gr/he07.ard
+  - name: ard/it/he07.ard
+  - name: ard/sp/he07.ard
+  method: binarc
+  source:
+  - name: btl
+    type: areadatascript
+    method: areadatascript
+    source:
+    - name: ard/he07/btl.script
+- name: ard/he10.ard
+  multi:
+  - name: ard/us/he10.ard
+  - name: ard/fr/he10.ard
+  - name: ard/gr/he10.ard
+  - name: ard/it/he10.ard
+  - name: ard/sp/he10.ard
+  method: binarc
+  source:
+  - name: btl
+    type: areadatascript
+    method: areadatascript
+    source:
+    - name: ard/he10/btl.script
+- name: ard/he11.ard
+  multi:
+  - name: ard/us/he11.ard
+  - name: ard/fr/he11.ard
+  - name: ard/gr/he11.ard
+  - name: ard/it/he11.ard
+  - name: ard/sp/he11.ard
+  method: binarc
+  source:
+  - name: btl
+    type: areadatascript
+    method: areadatascript
+    source:
+    - name: ard/he11/btl.script
+- name: ard/he15.ard
+  multi:
+  - name: ard/us/he15.ard
+  - name: ard/fr/he15.ard
+  - name: ard/gr/he15.ard
+  - name: ard/it/he15.ard
+  - name: ard/sp/he15.ard
+  method: binarc
+  source:
+  - name: btl
+    type: areadatascript
+    method: areadatascript
+    source:
+    - name: ard/he15/btl.script
+- name: ard/he16.ard
+  multi:
+  - name: ard/us/he16.ard
+  - name: ard/fr/he16.ard
+  - name: ard/gr/he16.ard
+  - name: ard/it/he16.ard
+  - name: ard/sp/he16.ard
+  method: binarc
+  source:
+  - name: btl
+    type: areadatascript
+    method: areadatascript
+    source:
+    - name: ard/he16/btl.script
+- name: ard/he17.ard
+  multi:
+  - name: ard/us/he17.ard
+  - name: ard/fr/he17.ard
+  - name: ard/gr/he17.ard
+  - name: ard/it/he17.ard
+  - name: ard/sp/he17.ard
+  method: binarc
+  source:
+  - name: btl
+    type: areadatascript
+    method: areadatascript
+    source:
+    - name: ard/he17/btl.script
+- name: remastered/msn/us/HE08_MS107.bar/US_HE08_MS107_bar0.png
+  multi:
+  - name: remastered/msn/fr/HE08_MS107.bar/US_HE08_MS107_bar0.png
+  - name: remastered/msn/gr/HE08_MS107.bar/US_HE08_MS107_bar0.png
+  - name: remastered/msn/it/HE08_MS107.bar/US_HE08_MS107_bar0.png
+  - name: remastered/msn/sp/HE08_MS107.bar/US_HE08_MS107_bar0.png
+  - name: remastered/msn/us/HE08_MS107.bar/US_HE08_MS107_bar0.png
+  method: copy
+  source:
+  - name: remastered/msn/us/HE08_MS107.bar/US_HE08_MS107_bar0.png
+- name: scripts/OCPeteNoTimer.lua
+  method: copy
+  source:
+  - name: scripts/OCPete.lua
