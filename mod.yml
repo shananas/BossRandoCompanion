@@ -3,30 +3,6 @@ originalAuthor: Shananas, Num, Kayya
 game: kh2
 description: Combines Nums Better Boss Scaling, Kayyas remove OC pete timer, and shananas boss rando movement fix mods into one mod for easy enabling and disabling put above the seed. Credit to them.
 assets:
-- name: obj/P_EX100_BTLF.mset
-  method: copy
-  source:
-  - name: obj/P_EX100_BTLF.mset
-- name: obj/P_EX100_MAGF.mset
-  method: copy
-  source:
-  - name: obj/P_EX100_MAGF.mset
-- name: obj/P_EX100_KH1F.mset
-  method: copy
-  source:
-  - name: obj/P_EX100_KH1F.mset
-- name: obj/P_EX100_TRIF.mset
-  method: copy
-  source:
-  - name: obj/P_EX100_TRIF.mset
-- name: obj/P_EX100_ULTF.mset
-  method: copy
-  source:
-  - name: obj/P_EX100_ULTF.mset
-- name: obj/P_EX100_HTLF.mset
-  method: copy
-  source:
-  - name: obj/P_EX100_HTLF.mset
 #Various Stuff
 - name: 00battle.bin
   method: binarc
