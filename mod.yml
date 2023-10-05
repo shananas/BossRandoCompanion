@@ -1,9 +1,9 @@
 title: Boss Rando Companion
 originalAuthor: Shananas, Num, Kayya
 game: kh2
-description: Combines Nums Better Boss Scaling, Kayyas remove OC pete timer, and shananas boss rando movement fix mods into one mod for easy enabling and disabling put above the seed. Credit to them.
+description: Combines Nums Better Boss Scaling, Kayyas remove OC pete timer, mods into one mod for easy enabling and disabling put above the seed. Also gives sora intangibility when doing PR barrel RC. Credit to them.
 assets:
-#Various Stuff
+#Better Boss Scaling
 - name: 00battle.bin
   method: binarc
   source:
@@ -138,6 +138,7 @@ assets:
     method: areadatascript
     source:
     - name: ard/he17/btl.script
+#Remove OC Pete timer
 - name: remastered/msn/us/HE08_MS107.bar/US_HE08_MS107_bar0.png
   multi:
   - name: remastered/msn/fr/HE08_MS107.bar/US_HE08_MS107_bar0.png
@@ -152,3 +153,8 @@ assets:
   method: copy
   source:
   - name: scripts/OCPete.lua
+#PR Barrel RC
+- name: obj/F_CA050.mset
+  method: copy
+  source:
+  - name: obj/F_CA050.mset
