@@ -1,26 +1,33 @@
-local offset = 0x56450E
-
 function _OnInit()
-	if GAME_ID == 0x431219CC and ENGINE_TYPE == "BACKEND" then
-		canExecute = true
-		ConsolePrint("No Timer script loaded!")
-		if ReadInt(0x2A5A056-offset) > 0 and ReadInt(0x2A59056-offset) == 0 then
-			offset = 0x56550E
-			offset2 = 0x56554E
-			ConsolePrint("Detected JP version. If this is incorrect, try reloading at a different time")
-		else
-			ConsolePrint("Detected GLOBAL version. If this is incorrect, try reloading at a different time")
-		end
-	else
-		ConsolePrint("KH2 not detected, not running script")
-	end
+    GameVersion = 0
 end
 
 function _OnFrame()
-Now = 0x0714DB8 - 0x56454E
-Place  = ReadShort(Now+0x00)
-Timer = 0xAB9050 - 0x56454E
 
+if GameVersion==0 then 
+	if ReadString(0x09A92F0,4) == 'KH2J' then --EGS
+		Now = 0x0716DF8
+		Timer = 0x0ABB290
+		GameVersion=1
+	end
+	if ReadString(0x09A9830,4) == 'KH2J' then --Steam Global 
+		Now = 0x0717008
+		GameVersion=2
+		Timer = 0x0ABB7D0
+	end
+end
+if GameVersion==0 then
+	return
+end
+
+World  = ReadByte(Now+0x00)
+Room   = ReadByte(Now+0x01)
+Place  = ReadShort(Now+0x00)
+Door   = ReadShort(Now+0x02)
+Map    = ReadShort(Now+0x04)
+Btl    = ReadShort(Now+0x06)
+Evt    = ReadShort(Now+0x08)
+PrevPlace = ReadShort(Now+0x30)
 if Place == 0x0806 then
 	WriteInt(Timer, 0) -- should always keep timer at 23 minutes??
 	end
